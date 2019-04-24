@@ -1,0 +1,6 @@
+<view bind:tap='onCreate'>
+  <slot></slot>
+</view>
+<canvas class='poster-canvas' 
+    canvas-id='poster' 
+    style='width: {{config.width || 100}}px; height: {{config.height || 100}}px;'/>

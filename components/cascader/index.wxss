@@ -1,0 +1,83 @@
+.cm-cascading-picker {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s linear;
+}
+
+.cm-cascading-picker .pane {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  opacity: 0;
+  transition: all 0.24s ease-out;
+  transform: translateY(200rpx);
+}
+
+.cm-cascading-picker .mask {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.2s linear;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.cm-cascading-picker.show, .cm-cascading-picker.show .mask {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cm-cascading-picker.show .pane {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* 时间-取消确定按钮 */
+.cm-cascading-picker .pane .btns {
+  position: relative;
+  overflow: hidden;
+}
+
+.cm-cascading-picker .pane .btns .btn {
+  color: #999;
+  font-size: 28rpx;
+  padding: 35rpx;
+}
+
+.cm-cascading-picker .pane .btns .btn.cancel {
+  float: left;
+  color: #999;
+}
+
+.cm-cascading-picker .pane .btns .btn.confirm {
+  float: right;
+  color: #333;
+}
+
+.cm-cascading-picker .pane picker-view {
+  position: relative;
+  display: flex;
+  height: 500rpx;
+  width: 100%;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.cm-cascading-picker-item {
+  height: 100rpx;
+}

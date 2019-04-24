@@ -1,0 +1,10 @@
+<view class='cm-countdown'>
+
+  <view class='cm-countdown-box'>
+    <block wx:for='{{times}}' wx:key='{{index}}'>
+      <text class='time' style='{{timeStyle}}'>{{item.n}}</text>
+      <text class='symbol' style='{{symbolStyle}}' wx:if='{{item.s}}'>{{item.s}}</text>
+    </block>
+  </view>
+
+</view>

@@ -1,0 +1,7 @@
+/* components/countdown/index.wxss */
+.cm-countdown-box, .cm-countdown {
+  display: inline-block;
+}
+.cm-countdown-box text {
+  display: inline-block;
+}

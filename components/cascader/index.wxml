@@ -1,0 +1,22 @@
+<wxs module='tls'>
+  function outLabel(item, label = 'label') {
+    return item[label];
+  }
+
+  module.exports.outLabel = outLabel;
+</wxs>
+
+<view class='cm-cascading-picker {{_display ? "show": ""}}' >
+  <view class='mask' data-type='cancel' bind:tap='bindBtn'></view>
+  <view class='pane'>
+    <view class='btns'>
+      <text class='btn cancel' data-type='cancel' bindtap='bindBtn'>取消</text>
+      <text class='btn confirm' data-type='submit' bindtap='bindBtn'>确认</text>
+    </view>
+    <picker-view indicator-class='cm-cascading-picker-item' value="{{_value}}" bindchange="bindChange" bindpickstart='bindChangeStart' bindpickend='bindChangeEnd'>
+      <picker-view-column wx:for='{{_ops}}' wx:for-item='rim' wx:for-index='rin' wx:key='{{rin}}'>
+        <view wx:for="{{rim}}" wx:key='{{rin}}_{{index}}' style="line-height: 100rpx">{{tls.outLabel(item, _props.label)}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>

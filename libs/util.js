@@ -164,5 +164,18 @@ export default {
       const d = Number(b.toString().replace('.', ''))
       return this.mul(c / d, 10 ** (f - e))
     }
-  }
+  },
+
+  /**
+   * 部分属性复制
+   * @param {Object} obj 目标对象
+   * @param {Array} attrs 所需属性
+   * @param {Boolean} deep 深拷贝？ 默认：false
+   * */
+  pick(obj = {}, attrs = [], deep = false) {
+    return attrs.reduce((i, v) => {
+      v in obj && (i[v] = deep ? JSON.parse(JSON.stringify(obj[v])) : obj[v])
+      return i
+    }, {})
+  },
 }

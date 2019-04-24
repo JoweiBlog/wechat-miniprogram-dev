@@ -1,0 +1,7 @@
+.poster-canvas {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  transform: translate3d(-10000px, 0, 0);
+}
