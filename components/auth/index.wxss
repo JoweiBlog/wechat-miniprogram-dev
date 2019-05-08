@@ -1,0 +1,129 @@
+:host {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 400;
+}
+
+@keyframes tinUpIn {
+    0% {
+        opacity: 0;
+        transform: scale(1,1) translateY(-120%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1,1) translateY(-50%)
+    }
+}
+
+@keyframes vanishOut {
+    0% {
+        opacity: 1;
+        transform: scale(1,1) translateY(-50%)
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1,1) translateY(-120%)
+    }
+}
+
+.component-auth-box {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  transition: all .3s linear;
+}
+.component-auth-box .auth-box {
+  position: absolute;
+  top: 50%;
+  left: 48rpx;
+  right: 48rpx;
+  transform: translateY(-50%);
+  background: #FFFFFF;
+  border-radius: 10rpx;
+  padding: 60rpx 48rpx 44rpx 48rpx;
+}
+.component-auth-box .auth-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0, .4);
+  z-index: 1;
+}
+.component-auth-box.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.component-auth-box.show {
+  opacity: 1;
+  visibility: visible;
+}
+.component-auth-box .auth-box {
+  position: absolute;
+  top: 50%;
+  left: 48rpx;
+  right: 48rpx;
+  transform: translateY(-50%);
+  background: #FFFFFF;
+  border-radius: 10rpx;
+  padding: 60rpx 48rpx 44rpx 48rpx;
+  z-index: 2;
+}
+.component-auth-box.hide .auth-box {
+  animation: vanishOut .4s both;
+}
+.component-auth-box.show .auth-box {
+ animation: tinUpIn .4s both;
+}
+
+.component-auth-box .auth-box .auth-text {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.component-auth-box .auth-box .auth-text .auth-logo {
+  display: block;
+  float: left;
+  margin-right: 24rpx;
+  width: 80rpx;
+  height: 81rpx;
+  background: #f2f2f2;
+  border-radius: 6rpx;
+}
+.component-auth-box .auth-box .auth-text .text-a {
+  float: left;
+}
+.component-auth-box .auth-box .auth-text .text-t {
+  font-size: 30rpx;
+  color: #666666;
+  padding-bottom: 4rpx;
+}
+.component-auth-box .auth-box .auth-text .text-i {
+  font-size: 24rpx;
+  color: #999999;
+}
+.component-auth-box .auth-box .auth-btn {
+  position: relative;
+  margin-top: 48rpx;
+  background: #1AAD19;
+  border-radius: 10rpx;
+  padding: 22rpx 0;
+  font-size: 32rpx;
+  color: #FFFFFF;
+  text-align: center;
+}
+.component-auth-box .auth-box .auth-btn button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+}

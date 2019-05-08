@@ -81,5 +81,6 @@ export default cache
 
 // cache config
 export const USER_INFO = 'userInfo'
+export const SHARE_ID = 'shareId'
 
 // export const ..

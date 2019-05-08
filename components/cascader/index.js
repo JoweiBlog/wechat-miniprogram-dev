@@ -1,20 +1,20 @@
-  /**
-   * 级联选择器
-   * 
-   * prop:
-   * @display: 显示/隐藏
-   * @options: 源数据
-   * @props:  可配置 级联 属性名， 默认：{ label: 'label', value: 'value', children: 'children' }
-   * @_default: 可设置默认选择项； 默认 []
-   * event:
-   * @bind:close:  选择器关闭触发，返回：
-   *  { 
-   *    type: 'cancel',  // cancel: 取消选择/点击遮罩层； submit: 确认
-   *    valueIns: [],     // 返回已选择的下标；(深度层级)
-   *    valueArr: [],     // 返回已选择的下标对应 option 内容
-   *  }
-   * 
-  */
+/**
+ * 级联选择器
+ * 
+ * prop:
+ * @display: 显示/隐藏
+ * @options: 源数据
+ * @props:  可配置 级联 属性名， 默认：{ label: 'label', value: 'value', children: 'children' }
+ * @_default: 可设置默认选择项； 默认 []
+ * event:
+ * @bind:close:  选择器关闭触发，返回：
+ *  { 
+ *    type: 'cancel',  // cancel: 取消选择/点击遮罩层； submit: 确认
+ *    valueIns: [],     // 返回已选择的下标；(深度层级)
+ *    valueArr: [],     // 返回已选择的下标对应 option 内容
+ *  }
+ * 
+*/
 
 Component({
   properties: {

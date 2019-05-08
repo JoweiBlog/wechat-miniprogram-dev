@@ -19,8 +19,8 @@ export default function fetch({
   method = 'GET',
   data = {},
   header = {},
-  resolve = noop,
-  reject = noop,
+  succ = noop,
+  fail = noop,
   done = noop
 } = {}) {
   const reqTask = wx.request({
@@ -38,19 +38,19 @@ export default function fetch({
       const res = response.data
       // rules
       if (res.resultStatus.code === 1000) {
-        resolve(res)
+        succ(res)
       } else {
-        resolve(null)
+        succ(null)
       }
     },
     fail(err) {
       isNetworkError((retry) => {
-        retry && resolve(reqTask) // 网络问题, 重试
+        fail(err) // 网络问题, 重试(暂无重试机制)
       }, () => {
-        reject(err)
+        fail(err)
       })
     },
-    complete: done()
+    complete: done
   })
 
   return reqTask
@@ -63,11 +63,11 @@ function isNetworkError(resolve = noop, reject = noop) {
   wx.getNetworkType({
     success(res) {
       if (res.networkType === 'none') {
-        wx.hideLoading() // 取消所有loading
+        wx.hideLoading()
         wx.showModal({
           title: '提示',
           content: '网络中断，建议检查网络连接',
-          confirmText: '重试',
+          confirmText: '稍后重试',
           showCancel: false,
           success(res) {
             resolve(res.confirm)

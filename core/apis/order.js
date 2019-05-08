@@ -1,6 +1,6 @@
 export default {
   getOrderList: {
-    url: '/v1/store/homepage/channel/list',
+    url: '/channel/list',
     method: 'GET',
   }
 }

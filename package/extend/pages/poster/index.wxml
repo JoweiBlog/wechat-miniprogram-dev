@@ -1,0 +1,15 @@
+<view>
+  <poster
+    config="{{config}}"
+    autoMake="{{autoMake}}"
+    bind:success="onMakeSucc"
+    bind:fail="onMakeFail"
+  >
+    <button bindtap="makeup">点击生成海报</button>
+  </poster>
+
+  <!-- display poster -->
+  <view style="padding: 50rpx; background: #f2f2f2">
+    <image src="{{img}}" mode="widthFix" style="display:block; width: 90%; margin: 0 auto;"></image>
+  </view>
+</view>

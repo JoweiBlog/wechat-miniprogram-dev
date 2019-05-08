@@ -1,0 +1,25 @@
+<view class='component-auth'>
+
+  <view class='component-auth-box {{display ? "show":"hide"}}'>
+    <view class='auth-mask' style='background: {{bg}}'></view>
+    <view class='auth-box'>
+      <view class='auth-text'>
+        <image class='auth-logo' src=''></image>
+        <view class='text-a'>
+          <view class='text-t'>申请获取以下权限</view>
+          <view class='text-i'>{{scopeDesc || ''}}</view>
+        </view>
+      </view>
+      <view class='auth-btn'>
+        <button 
+          open-type='{{openType}}' 
+          type="default" 
+          bindgetphonenumber='onGetUserPhone'
+          bindopensetting='onOpenSetting'
+          bindgetuserinfo='onGetUserInfo'>确认授权</button>  
+        确认授权
+      </view>
+    </view>
+  </view>
+
+</view>

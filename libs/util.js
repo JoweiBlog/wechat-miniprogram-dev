@@ -7,6 +7,28 @@ const formatNumber = n => {
 
 export default {
   /**
+   * 解析二维码场景参数 (同服务端协定 scene 以及 params))
+   * scene: ''
+   * keys: []  // 参数名，按顺序填写
+   * 
+   * eg: 
+   * scene: 'activity',
+   * keys: ['actId', 'userId, 'userName']
+   * path: /pages/activity?scene=21;43;lilei
+   * 
+   * return: { actId: '21', userId: '43', userName: 'lilei' }
+   */
+  resolveSceneParams(scene = '', keys = []) {
+    if (keys.length <= 0) return null
+    let params = {}
+    const hashes = decodeURIComponent(scene + '').split(';')
+    hashes.map((val, index) => {
+      params[keys[index]] = decodeURIComponent(val)
+    })
+    return params
+  },
+
+  /**
    * @description deepClone 深拷贝（简易）
    * @param {Object|Array} obj
    * @parsm .obj

@@ -1,0 +1,21 @@
+<view>
+  <view>1:::</view>
+  <countdown
+    time="{{timer.time}}"
+    format="{{timer.format}}"
+    sign="{{timer.sign}}"
+    bind:running="onRunning"
+    bind:end="onEnd"
+  ></countdown>
+
+  <view>2:::</view>
+  <countdown
+    time="{{count.time}}"
+    format="{{count.format}}"
+    timeStyle="{{count.timeStyle}}"
+    symbolStyle="{{count.symbolStyle}}"
+    sign="{{count.sign}}"
+    bind:running="onRunning"
+    bind:end="onEnd"
+  ></countdown>
+</view>

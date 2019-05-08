@@ -1,0 +1,12 @@
+<!-- component -->
+<cascader 
+  display="{{city.display}}" 
+  options="{{city.options}}" 
+  props="{{city.props}}"
+  bind:close="onClose">
+</cascader>
+
+<!-- page -->
+<view>
+  <button bindtap="choose">{{city.value.length > 0 ? city.value : 'choose city'}}</button>
+</view>

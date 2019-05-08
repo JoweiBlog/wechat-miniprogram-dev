@@ -8,6 +8,6 @@ export const KEYS = {
 
 // domain
 export const DM = {
-  domain: 'https://leya-api-test.beautyinbud.com',
+  domain: 'https://xxx.com',
   // domain: 'https://jowei.com'
 }

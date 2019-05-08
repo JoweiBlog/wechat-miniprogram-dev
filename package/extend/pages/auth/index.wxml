@@ -1,0 +1,18 @@
+<!-- component -->
+<auth display='{{authDisplay}}' scope='{{authScope}}' bind:success='_onAuthDone'></auth>
+
+<!-- page -->
+<view>
+  <view>
+    <view>
+    :> 调用微信需要授权的api（如userLocation等）时，提前预检查其授权状态，
+    若未授权将自动调起对应授权弹窗，授权完成继续执行。
+    </view>
+
+    <view>
+    :> 提示: 该授权过程为 强授权，未授权用户将无法继续其他操作, 若较注重用户体验，慎用
+    </view>
+  </view>
+  <button bindtap="checkRecordPerm">checkRecordPerm</button>
+  <button bindtap="checkUserInfoPerm">checkUserInfoPerm</button>
+</view>

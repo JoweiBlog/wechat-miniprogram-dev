@@ -71,7 +71,7 @@
 
 .cm-cascading-picker .pane picker-view {
   position: relative;
-  display: flex;
+  /* display: flex; */
   height: 500rpx;
   width: 100%;
   text-align: center;

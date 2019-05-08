@@ -1,0 +1,31 @@
+<view>
+
+  <button bindtap="setUserCache">设置随机user local缓存</button>
+  <button bindtap="getUserCache">读取user缓存</button>
+  <view>
+    user id::
+    <view>
+      {{user.id || ''}}
+    </view>
+  </view>
+
+  <button bindtap="setShareCache">设置随机share session缓存</button>
+  <button bindtap="getShareCache">读取share session缓存</button>
+  <view>
+    share id::
+    <view>
+      {{shareId || ''}}
+    </view>
+  </view>
+
+  <button bindtap="setIdCache">设置随机id 10s expire缓存</button>
+  <button bindtap="getIdCache">读取id缓存(10s内访问有效)</button>
+  <view>
+    id::
+    <view>
+      {{id || ''}}
+    </view>
+  </view>
+
+
+</view>

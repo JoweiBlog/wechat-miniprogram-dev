@@ -1,4 +1,76 @@
 <!--index.wxml-->
 <view class="container">
-  home
+
+  <navigator class='item' url='/package/extend/pages/fetch/index'>
+    <view class='title'>
+      fetch
+    </view>
+    <view class='desc'>
+      异步请求, 以及api模块化
+    </view>
+  </navigator>
+
+  <navigator class='item' url='/package/extend/pages/cache/index?pa=xe'>
+    <view class='title'>
+      cache
+    </view>
+    <view class='desc'>
+      模拟 local / session / expire storage 等
+    </view>
+  </navigator>
+
+  <navigator class='item'>
+    <view class='title'>
+      page
+    </view>
+    <view class='desc'>
+      页面栈互相通信
+    </view>
+  </navigator>
+
+  <navigator class='item'>
+    <view class='title'>
+      page decorator
+    </view>
+    <view class='desc'>
+      页面装饰器实例，如：该例每个页面pv统计;
+    </view>
+  </navigator>
+
+  <navigator class='item' url='/package/extend/pages/auth/index'>
+    <view class='title'>
+      预检查强授权组件
+    </view>
+    <view class='desc'>
+      提前检查授权状态，并指导用户授权后继续完成原有操作 （该组件已默认全局引入）
+    </view>
+  </navigator>
+
+  <navigator class='item' url='/package/extend/pages/countdown/index'>
+    <view class='title'>
+      倒计时组件
+    </view>
+    <view class='desc'>
+      提供简易倒计时功能
+    </view>
+  </navigator>
+
+  <navigator class='item' url='/package/extend/pages/poster/index'>
+    <view class='title'>
+      生成海报组件
+    </view>
+    <view class='desc'>
+      提供配置生成海报、分享图组件，config => canvas => image
+    </view>
+  </navigator>
+
+  <navigator class='item' url='/package/extend/pages/cascader/index'>
+    <view class='title'>
+      级联选择组件
+    </view>
+    <view class='desc'>
+      提供底部弹窗类型级联选择功能
+    </view>
+  </navigator>
+
 </view>

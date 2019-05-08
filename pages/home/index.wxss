@@ -1,0 +1,21 @@
+.container {
+  padding: 30rpx;
+}
+
+.item {
+  display: block;
+  box-shadow: 0 1px 20px rgba(0,0,0,.1);
+  padding: 24rpx 32rpx;
+  margin-bottom: 24rpx;
+}
+
+.item .title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.item .desc {
+  padding-top: 6rpx;
+  font-size: 26rpx;
+  color: #999;
+}

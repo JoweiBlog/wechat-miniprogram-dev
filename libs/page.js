@@ -8,7 +8,7 @@
  * onUnload：app.pages.delete(this) 
  * 
  * # page c
- * app.pages.get('/pages/a/index').doSomething..
+ * app.pages.get('/pages/a/index').doSomething()
  * 
 */
 
