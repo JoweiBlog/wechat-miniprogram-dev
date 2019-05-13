@@ -1,0 +1,121 @@
+view, cover-view, cover-image {
+  box-sizing: border-box;
+}
+
+.navigation-bar {
+  /* height: 176rpx; */
+}
+
+.navigation-bar .wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-height: 160rpx;
+  box-sizing: content-box;
+  text-align: left;
+  z-index: 999;
+  background: transparent;
+}
+
+.navigation-bar .box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* background: #333; */
+}
+
+.navigation-bar .box .tools {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* dot */
+.navigation-bar .box .tools .dot {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  background: rgba(255,255,255,.5);
+  border: 1rpx solid rgba(0,0,0,.1);
+  border-radius: 60rpx;
+}
+
+.navigation-bar .box .tools .dot .dot-i {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-bar .box .tools .dot .dot-line {
+  flex-shrink: 0;
+  width: 1rpx;
+  /* border: 1rpx solid #333; */
+  background: rgba(0,0,0,.08);
+  height: 55%;
+}
+
+.navigation-bar .box .tools .dot .dot-i cover-image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+/* back */
+.navigation-bar .box .tools .back {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-bar .box .tools .back cover-image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* custom */
+.navigation-bar .box .tools .custom-dot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 24rpx;
+  justify-content: center;
+  border: 1rpx solid rgba(0,0,0,.1);
+  border-radius: 50%;
+}
+
+.navigation-bar .box .tools .custom-dot .custom-dot-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 76%;
+  height: 76%;
+  border-radius: 50%;
+  background: #3F434D;
+  padding: 10rpx;
+}
+
+.navigation-bar .box .tools .custom-dot cover-image {
+  width: 100%;
+}
+
+.navigation-bar .box .title {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-size: 38rpx;
+  font-weight: bold;
+  color: #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

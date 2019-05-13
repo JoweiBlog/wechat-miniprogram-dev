@@ -1,0 +1,35 @@
+<view class='navigation-bar'>
+  <cover-view class='wrapper' style="{{wrapperStyle}}">
+    <cover-view class='box' style="{{boxStyle}}">
+      <cover-view class='tools' style="{{toolStyle}}">
+
+        <!-- 自定义 -->
+        
+        <cover-view class='custom-dot' style="{{dotStyle}}" bindtap='home'>
+          <cover-view class='custom-dot-box'>
+            <cover-image mode="widthFix" src="./source/logo-slack.png"></cover-image>
+          </cover-view>
+        </cover-view>
+
+        <!-- 模拟微信后退 -->
+
+        <!-- <cover-view class='back' style="{{dotStyle}}" bindtap='back'>
+          <cover-image mode="widthFix" src="./source/back.png"></cover-image>
+        </cover-view> -->
+
+        <!-- 模拟微信菜单 -->
+
+        <!-- <cover-view class='dot'>
+          <cover-view class='dot-i' bindtap='back'>
+            <cover-image src="./source/back.png"></cover-image>
+          </cover-view>
+          <cover-view class='dot-line'></cover-view>
+          <cover-view class='dot-i' bindtap="home">
+            <cover-image src="./source/home.png"></cover-image>
+          </cover-view>
+        </cover-view> -->
+      </cover-view>
+      <cover-view class='title' style="{{titleStyle}}">Dots</cover-view>
+    </cover-view>
+  </cover-view>
+</view>

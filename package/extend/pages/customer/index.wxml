@@ -1,0 +1,37 @@
+<view class='page'>
+  <navigation-bar background="{{barBg}}"></navigation-bar>
+  
+  <view class='pane'>
+    <view class='box'>
+      <image class='pic' mode="widthFix" lazy-load src='../../../../assets/d.jpeg'></image>
+    </view>
+    <view class='name'>Alexandra Gorn</view>
+    <view class='desc'>
+      brown wooden framed white padded chair in between green indoor leaf plants inside bedroom.
+      black alarm clock at 10:10 on white wooden table near table.
+      brown wooden framed white padded chair in between green indoor leaf plants inside bedroom.
+      brown wooden framed white padded chair in between green indoor leaf plants inside bedroom.
+    </view>
+    <view class='desc'>
+      gray table lamp beside white bed pillow
+      brown wooden framed white padded chair in between green indoor leaf plants inside bedroom.
+      black alarm clock at 10:10 on white wooden table near table.
+    </view>
+    <view class='desc'>
+      gray table lamp beside white bed pillow
+      brown wooden framed white padded chair in between green indoor leaf plants inside bedroom.
+      black alarm clock at 10:10 on white wooden table near table.
+    </view>
+    <view class='desc'>
+      brown wooden framed white padded chair in between green indoor leaf plants inside bedroom.
+      black alarm clock at 10:10 on white wooden table near table.
+      brown wooden framed white padded chair in between green indoor leaf plants inside bedroom.
+      brown wooden framed white padded chair in between green indoor leaf plants inside bedroom.
+    </view>
+    <view class='desc'>
+      gray table lamp beside white bed pillow
+      brown wooden framed white padded chair in between green indoor leaf plants inside bedroom.
+      black alarm clock at 10:10 on white wooden table near table.
+    </view>
+  </view>
+</view>

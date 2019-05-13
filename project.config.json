@@ -11,10 +11,18 @@
 		"newFeature": true,
 		"autoAudits": false,
 		"uglifyFileName": true,
-		"checkInvalidKey": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.0",
+	"libVersion": "2.6.5",
 	"appid": "wxa033a21c32aa5b81",
 	"projectname": "mini-program---template",
 	"debugOptions": {
@@ -41,8 +49,15 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "customer",
+					"pathName": "package/extend/pages/customer/index",
+					"scene": null
+				}
+			]
 		}
 	}
 }

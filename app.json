@@ -12,7 +12,8 @@
         "pages/cascader/index",
         "pages/poster/index",
         "pages/fetch/index",
-        "pages/cache/index"
+        "pages/cache/index",
+        "pages/customer/index"
       ]
     }
   ],
