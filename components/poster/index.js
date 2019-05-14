@@ -93,7 +93,7 @@ Component({
      *      ]
      *    }
      * 
-    */
+     */
     config: {
       type: Object,
       value: {},

@@ -13,6 +13,7 @@ Page({
       user: 'Jowei'
     }
     $cache.set(caches.USER_INFO, user)
+    getApp().pages.get('pages/home/index').doSomething()
   },
 
   getUserCache() {
@@ -42,6 +43,7 @@ Page({
   },
 
   onLoad() {
+    console.log(getApp().pages)
     this.getUserCache()
     this.getShareCache()
     this.getIdCache()

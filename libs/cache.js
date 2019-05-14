@@ -10,7 +10,7 @@
  * cache.set('n', 1, 10000)
  * cache.get('n') // 1 ，10s内访问有效
  * 
- * # localstorage 延续上次缓存时间，若上次没缓存，此次设置也将取消（retrun）
+ * # localstorage 延续上次缓存时间，若上次没缓存，此次设置也将取消（return）
  * cache.set('n', 1, true)
  * cache.get('n') // 1
  * 

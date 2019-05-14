@@ -1,6 +1,7 @@
 // home
 Page({
   data: {
+    log: '',
     spec: [
       {
         title: 'fetch',
@@ -49,4 +50,15 @@ Page({
       },
     ]
   },
+  doSomething() {
+    this.setData({
+      log: 'log changed'
+    })
+  },
+  onLoad() {
+    getApp().pages.add(this)
+  },
+  onUnload() {
+    getApp().pages.delete(this)
+  }
 })
