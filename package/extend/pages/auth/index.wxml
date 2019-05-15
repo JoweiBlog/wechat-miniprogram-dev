@@ -10,7 +10,7 @@
     </view>
 
     <view>
-    :> 提示: 该授权过程为 强授权，未授权用户将无法继续其他操作, 若较注重用户体验，慎用
+    :> 提示: 该授权过程为 强授权，未授权用户将无法继续其他操作, 若较注重用户体验
     </view>
   </view>
   <button bindtap="checkRecordPerm">checkRecordPerm</button>

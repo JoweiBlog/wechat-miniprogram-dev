@@ -62,6 +62,7 @@ const config = {
 Page({
   data: {
     config: config,
+    ori: 'https://joweiblog.oss-cn-shanghai.aliyuncs.com/x.png',
     img: '',
     autoMake: false,
   },

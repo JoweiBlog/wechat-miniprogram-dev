@@ -10,6 +10,7 @@
 
   <!-- display poster -->
   <view style="padding: 50rpx; background: #f2f2f2">
-    <image src="{{img}}" mode="widthFix" style="display:block; width: 90%; margin: 0 auto;"></image>
+    <view>{{(!img) ? '资源图' : '海报'}}</view>
+    <image src="{{img || ori}}" mode="widthFix" style="display:block; width: 90%; margin: 0 auto;"></image>
   </view>
 </view>

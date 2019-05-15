@@ -15,9 +15,9 @@ Page({
     this.wxa.checkScope({
       scope: 'scope.record',
       done() {
-        console.log('done record auth,');
+        console.log('done record auth');
         wx.showToast({
-          title: '可以用record~',
+          title: '可以用record',
         })
         // eg: 开始录制
         // recorderMng.start({
