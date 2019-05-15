@@ -224,6 +224,9 @@ _detail: userinfo / userPhone 时会返回detail信息_
 _code: login code(session 过期才会重新获取)_
 
 ``` javascript
+// Mng
+const recorderMng = wx.getRecorderManager()
+
 // 录音
 record() {
   // 检查授权
@@ -245,18 +248,41 @@ record() {
 ### # 生成海报组件
 
 配置生成海报
- - 组件属性值较多，详细查看组件内注释文档
- - 暂不支持本地图片
+
+- 方便前端配置生成简单海报
+- 提供 `Block` `Image` `Text` 三种模式, 以及`Color`纯色、渐变等模式配置
+- config => canvas => image
+- 组件属性值较多，详细Config查看组件内注释文档
+- 暂不支持本地图片
+- 真机暂不支持自定义字体
+
+> Props
 
 | Props  | Type | Description |
 | ------------ | ---- | -----|
-| config    | `Object` | 配置 |
-| autoMake    | `Boolean` | 自动生成 ? 点击生成  |
+| config    | `Object` | Config配置, 详细见下表 |
+| autoMake    | `Boolean` | 自动生成 ? 点击slot生成  |
+
+> Config
 
 | Config  | Type | Description |
 | ------------ | ---- | -----|
-| config    | `Object` | 配置 |
-| autoMake    | `Boolean` | 自动生成 ? 点击生成  |
+| width    | `Number` | 画布宽度 |
+| height    | `Number` | 画布高度 |
+| bgColor    | `String` `Object` | 画布背景色 Color |
+| block    | `Array` | 占位配置 [...Block] |
+| image    | `Array` | 图片配置 [...Image]|
+| text    | `Array` | 文字配置 [...Text] |
+
+> Module
+
+| Module  | Type | Description |
+| ------------ | ---- | -----|
+| Block    | `Object` | 占位配置(文档) |
+| Image    | `Object` | 图片配置(文档) |
+| Text    | `Object` | 文字配置(文档) |
+| Color    | `String` `Object` | 颜色模式，纯色、渐变等 |
+
 
 ![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-poster.gif)
-> 海报实例.
+> 点击生成海报实例.
