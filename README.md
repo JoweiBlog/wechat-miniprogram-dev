@@ -139,17 +139,17 @@ Page({
 
 提供简易倒计时功能
 
-| Props | Description                    |
-| ------------- | ------------------------------ |
-| `time`      | 时间（秒）      |
-| `format`   | 格式化显示， 默认：dd天hh时mm分ss秒     |
-| `timeStyle`   | 时间style样式；默认： '' (::font/color 等可继承父级，一般不用配置)     |
-| `symbolStyle`   |  时间symbol样式：默认：'' (::font/color 等可继承父级，一般不用配置)     |
-| `sign`   |同时使用多个 countdown 组件时，需要 **sign** 标注唯一，通知时会回传sign     |
+| Props | Type | Description                    |
+| ------------- | --- | ------------------------------ |
+| `time`      | `Number` | 时间（秒）      |
+| `format`   | `String`| 格式化显示， 默认：dd天hh时mm分ss秒     |
+| `timeStyle`   | `String`| 时间style样式；默认： '' (::font/color 等可继承父级，一般不用配置)     |
+| `symbolStyle`   | `String`|  时间symbol样式：默认：'' (::font/color 等可继承父级，一般不用配置)     |
+| `sign`   | `String` |同时使用多个 countdown 组件时，需要 **sign** 标注唯一，通知时会回传sign     |
   
-| Event | Description                    |
-| ------------- | ------------------------------ |
-| `running()`      | 倒计时进行中,  返回：**{ sign, time }**// time: 实时计时(s)      |
+| Event | Description                 |
+| -------------  | ------------------------------ |
+| `running()`    | 倒计时进行中,  返回：**{ sign, time }**// time: 实时计时(s)      |
 | `end()`   |倒计时结束后执行，返回:**{ sign }**     |
 
 ----
@@ -157,12 +157,12 @@ Page({
 
 提供弹窗形式cascader
 
-| Props | Description                    |
-| ------------- | ------------------------------ |
-| `display`      | 显示/隐藏      |
-| `options`   | 源数据     |
-| `props`   | 可配置 级联 属性名， 默认：{ label: 'label', value: 'value', children: 'children' }   |
-| `_default`   |  可设置默认选择项； 默认 []    |
+| Props |Type | Description                    |
+| ------------- | --- | ------------------------------ |
+| `display`     | `Boolean` | 显示/隐藏      |
+| `options`   | `Object`| 源数据     |
+| `props`   | `Object`| 可配置 级联 属性名， 默认：{ label: 'label', value: 'value', children: 'children' }   |
+| `_default`   | `Array`|  可设置默认选择项； 默认 []    |
 
 | Event | Description                    |
 | ------------- | ------------------------------ |
@@ -211,10 +211,10 @@ Page({
  - 组件默认强制授权继续操作，可在基础上优化改进用户体验
  - 需要配合**WxAuth**桥接组件，详细查看demo
 
-| Props | Description                    |
-| ------------- | ------------------------------ |
-| `display`      | 显示/隐藏     |
-| `scope`      | [微信scope权限值](https://developers.weixin.qq.com/miniprogram/dev/api/authorize-index.html)， 如：scope.userLocation    |
+| Props | Type | Description                    |
+| ------------- | --- | ------------------------------ |
+| `display`    | `Boolean`  | 显示/隐藏，提供该属性仅用与WxAuth控制显隐组件     |
+| `scope`      | `String` | [微信scope权限值](https://developers.weixin.qq.com/miniprogram/dev/api/authorize-index.html)， 如：scope.userLocation    |
 
 | Event | Description                    |
 | ------------- | ------------------------------ |
@@ -245,12 +245,18 @@ record() {
 ### # 生成海报组件
 
 配置生成海报
+ - 组件属性值较多，详细查看组件内注释文档
+ - 暂不支持本地图片
 
-| Left-Aligned  | Center Aligned  | Right Aligned |
-| :------------ |:---------------:| -----:|
-| col 3 is      | some wordy text | $1600 |
-| col 2 is      | centered        |   $12 |
-| zebra stripes | are neat        |    $1 |
+| Props  | Type | Description |
+| ------------ | ---- | -----|
+| config    | `Object` | 配置 |
+| autoMake    | `Boolean` | 自动生成 ? 点击生成  |
+
+| Config  | Type | Description |
+| ------------ | ---- | -----|
+| config    | `Object` | 配置 |
+| autoMake    | `Boolean` | 自动生成 ? 点击生成  |
 
 ![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-poster.gif)
 > 海报实例.
