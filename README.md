@@ -42,31 +42,31 @@ import $cache, * as caches from 'path/to/./libs/cache.js'
 ``` javascript
 // page A
 Page({
-	data: {
-		log: 'ori log content'
-	},
-	//..
-	changeLog () {
-		this.setData({ log: 'log changed.' })
-	},
-	onLoad() {
-		// 页面栈, 建议：仅需要通信的页面加入栈中
-		getApp().pages.add(this)
-	},
-	onUnload() {
-	  	// 页面卸载关闭
-		getApp().pages.delete(this)
-	}
+  data: {
+    log: 'ori log content'
+  },
+  //..
+  changeLog () {
+    this.setData({ log: 'log changed.' })
+  },
+  onLoad() {
+    // 页面栈, 建议：仅需要通信的页面加入栈中
+    getApp().pages.add(this)
+  },
+  onUnload() {
+    // 页面卸载关闭
+    getApp().pages.delete(this)
+  }
 })
 
 // page B
 Page({
-	//...
-	doSomething() {
-	 	// ..
-	  	// 调起 page A  / changeLog
-		getApp().pages.get('path/to/A').changeLog()
-	},
+  //...
+  doSomething() {
+    // ..
+    // 调起 page A  / changeLog
+    getApp().pages.get('path/to/A').changeLog()
+  },
 })
 ```
 
@@ -86,8 +86,8 @@ export default Page = (data) => {
   const onLoad = data.onLoad;
   data.onLoad = function(...args) {
     RecordPV.call(this)
-	// do something before oriPage onLoad
-	// ..
+    // do something before oriPage onLoad
+    // ..
     return onLoad && onLoad.call(this, ...args)
   }
 
