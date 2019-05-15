@@ -183,6 +183,7 @@ Page({
 
 组件为自定义navigationBar实例，暂无复杂配置，通常也不建议在navigationBar做过多业务/UI；
 提供了三种模式参考，`自定义单点` `模拟微信后退` `模拟微信菜单`  可依据自身业务自行定义。
+提示：目前(19/5/13前)获取菜单位置api  开发工具与真机结果有差别，注意调试;
 
 ![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-3.png?x-oss-process=style/scalesmall)
 > 自定义单点
@@ -202,9 +203,43 @@ Page({
 > bar跟随滚动淡出实例.
 
 ----
-### # 预检授权组件
+### # 预检授权组件 && WxAuth
 
 提前检查授权状态，(已)授权后将完成原有操作
+ - 解决获取权限场景
+ - 授权成功回调
+ - 组件默认强制授权继续操作，可在基础上优化改进用户体验
+ - 需要配合**WxAuth**桥接组件，详细查看demo
+
+| Props | Description                    |
+| ------------- | ------------------------------ |
+| `display`      | 显示/隐藏     |
+| `scope`      | [微信scope权限值](https://developers.weixin.qq.com/miniprogram/dev/api/authorize-index.html)， 如：scope.userLocation    |
+
+| Event | Description                    |
+| ------------- | ------------------------------ |
+| `success()`      | 授权成功: { scope, [result: { detail, [code] }] } |
+
+_detail: userinfo / userPhone 时会返回detail信息_
+_code: login code(session 过期才会重新获取)_
+
+``` javascript
+// 录音
+record() {
+  // 检查授权
+  this.wxa.checkScope({
+    scope: 'scope.record',
+    done() {
+      console.log('finish record auth,');
+      // 现在可以用 recorderMng api 咯
+      // recorderMng.start({
+      //   duration: 60000,
+      //   format: 'mp3'
+      // })
+    }
+  })
+}
+```
 
 ----
 ### # 生成海报组件
