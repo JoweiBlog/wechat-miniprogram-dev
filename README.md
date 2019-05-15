@@ -105,8 +105,8 @@ function RecordPV() {
 ### # fetch
 
 封装请求，api模块化
-_tip: 目的只是为了简化wx.request，统一作部分rule code拦截，以及error处理; _
-_因业务场景不同，已取消 promise风格化、重试机制、auth请求加锁、请求取消等。_
+; tip: 目的只是为了简化wx.request，统一作部分rule code拦截，以及error处理; 
+_因业务场景不同，已取消 `~~promise风格化~~`、`~~重试机制~~`、`~~auth请求加锁~~`、`~~请求取消~~`等_
 
 ``` javascript
 // req
