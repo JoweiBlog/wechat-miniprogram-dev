@@ -184,13 +184,13 @@ Page({
 组件为自定义navigationBar实例，暂无复杂配置；
 提供了三种模式参考，`自定义单点` `模拟微信后退` `模拟微信菜单`  可依据自身业务自行定义。
 
-![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-3.png)
+![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-3.png?x-oss-process=style/scalesmall)
 > 自定义单点
 
-![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-2.png)
+![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-2.png?x-oss-process=style/scalesmall)
 > 模拟微信后退
 
-![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-1.png)
+![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-1.png?x-oss-process=style/scalesmall)
 > 模拟微信菜单
 
 
