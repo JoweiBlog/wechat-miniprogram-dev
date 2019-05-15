@@ -188,7 +188,7 @@ Page({
 | ------------- | ------------------------------ |
 | `background`      | 背景色     |
 
-![](https://www.mdeditor.com/images/logos/markdown.png)
+![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-custom-header.gif)
 > bar跟随滚动淡出实例.
 
 ----
@@ -207,5 +207,5 @@ Page({
 | col 2 is      | centered        |   $12 |
 | zebra stripes | are neat        |    $1 |
 
-![](https://www.mdeditor.com/images/logos/markdown.png)
+![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-poster.gif)
 > 海报实例.
