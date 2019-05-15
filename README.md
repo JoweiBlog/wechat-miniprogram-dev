@@ -113,24 +113,24 @@ _因业务场景不同，已取消 promise风格化、重试机制、auth请求�
 import fetch, { apis } from 'path/to/./core/fetch.js'
 
 Page({
-	req () {
-		 fetch({
-		  ...apis.order.getOrderList,
-		  data: {
-			page: 1,
-			page_size: 10
-		  },
-		  succ: (res) => {
-			console.log(res)
-		  },
-		  fail: (err) => {
-			console.log(err)
-		  },
-		  done: () => {
-			console.log('done')
-		  }
-		})
-	}
+  req () {
+    fetch({
+      ...apis.order.getOrderList,
+      data: {
+        page: 1,
+        page_size: 10
+      },
+      succ: (res) => {
+        console.log(res)
+      },
+      fail: (err) => {
+        console.log(err)
+      },
+      done: () => {
+        console.log('done')
+      }
+    })
+  }
 })
 
 ```
@@ -149,8 +149,8 @@ Page({
   
 | Event | Description                    |
 | ------------- | ------------------------------ |
-| `running()`      | 倒计时进行中,  返回：**{ sign, time } **// time: 实时计时(s)      |
-| `end()`   |倒计时结束后执行，返回:** { sign }**     |
+| `running()`      | 倒计时进行中,  返回：**{ sign, time }**// time: 实时计时(s)      |
+| `end()`   |倒计时结束后执行，返回:**{ sign }**     |
 
 ----
 ### # 级联选择组件
@@ -183,6 +183,16 @@ Page({
 
 组件为自定义navigationBar实例，暂无复杂配置；
 提供了三种模式参考，`自定义单点` `模拟微信后退` `模拟微信菜单`  可依据自身业务自行定义。
+
+![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-3.png)
+> 自定义单点
+
+![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-2.png)
+> 模拟微信后退
+
+![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-1.png)
+> 模拟微信菜单
+
 
 | Props | Description                    |
 | ------------- | ------------------------------ |
