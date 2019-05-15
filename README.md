@@ -181,7 +181,7 @@ Page({
 ----
 ### # 自定义navigationBar
 
-组件为自定义navigationBar实例，暂无复杂配置；
+组件为自定义navigationBar实例，暂无复杂配置，通常也不建议在navigationBar做过多业务/UI；
 提供了三种模式参考，`自定义单点` `模拟微信后退` `模拟微信菜单`  可依据自身业务自行定义。
 
 ![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-3.png?x-oss-process=style/scalesmall)
