@@ -1,6 +1,7 @@
 # 微信小程序开发经验+
 
 > 总结了一些开发微信小程序过程中遇到问题的解决方式/经验分享，另外共享几个通用组件
+> ## 小程序迭代较快，很多内容已过期或有更好的替代方案，酌情参考。
 
 ----
 ### # cache
@@ -192,20 +193,20 @@ Page({
 ```
 
 ----
-### # 自定义navigationBar
-
-组件为自定义navigationBar实例，暂无复杂配置，通常也不建议在navigationBar做过多业务/UI；
+### # ~~自定义navigationBar~~
+### # 尝试WeUI组件: mp-navigation-bar
+~~组件为自定义navigationBar实例，暂无复杂配置，通常也不建议在navigationBar做过多业务/UI；
 提供了三种模式参考，`自定义单点` `模拟微信后退` `模拟微信菜单`  可依据自身业务自行定义。
 提示：目前(19/5/13前)获取菜单位置api  开发工具与真机结果有差别，注意调试;
 
 ![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-3.png?x-oss-process=style/scalesmall)
-> 自定义单点
+~~> 自定义单点
 
 ![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-2.png?x-oss-process=style/scalesmall)
-> 模拟微信后退
+~~> 模拟微信后退
 
 ![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-header-ui-1.png?x-oss-process=style/scalesmall)
-> 模拟微信菜单
+~~> 模拟微信菜单
 
 
 | Props | Description                    |
@@ -213,7 +214,7 @@ Page({
 | `background`      | 背景色     |
 
 ![](https://joweiblog.oss-cn-shanghai.aliyuncs.com/demo-custom-header.gif)
-> bar跟随滚动淡出实例.
+~~> bar跟随滚动淡出实例.
 
 ----
 ### # 预检授权组件 && WxAuth
